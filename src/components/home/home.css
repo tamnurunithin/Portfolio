@@ -1,0 +1,137 @@
+/* Background & Layout */
+.home_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  scroll-margin-top: 80px;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+/* Image & Text Transition Base */
+.home__img,
+.intro {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When visible */
+.home_container.visible .home__img,
+.home_container.visible .intro {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideInUp 1s ease-out forwards;
+}
+
+/* Avatar Image */
+.home__img {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Hover/Touch Effects for Avatar */
+.home__img:hover,
+.home__img:focus,
+.home__img:active {
+  transform: scale(1.05) rotateZ(2deg);
+  box-shadow: 0 0 15px #38bdf8, 0 0 30px rgba(56, 189, 248, 0.5);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Clicked 3D effect */
+.home__img.clicked {
+  transform: rotateY(180deg) scale(1.2);
+}
+
+/* Intro Section */
+.intro {
+  max-width: 500px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease-out;
+}
+
+/* Hover/Touch Effects for Intro Text */
+.intro:hover,
+.intro:focus-within {
+  transform: translateY(-5px) scale(1.02);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+/* Clicked 3D effect */
+.intro.clicked {
+  transform: rotateY(10deg) translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Name Styling with Gradient Animation */
+.home__name {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #00ffcc, #ff66cc);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 6s ease infinite;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Enhanced Hover Effect on Name */
+.home__name:hover {
+  transform: scale(1.1) rotateY(15deg);
+  text-shadow: 0 0 8px #38bdf8, 0 0 16px rgba(56, 189, 248, 0.4);
+}
+
+/* Education Text */
+.home__education {
+  font-size: 2rem;
+  color: #e5e7eb;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for education text */
+.home__education:hover {
+  color: #38bdf8;
+  transform: translateX(5px);
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+/* Slide In Animation */
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Gradient Animation */
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

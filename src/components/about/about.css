@@ -1,0 +1,176 @@
+/* Background & Layout */
+.about_container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f8fafc; /* matching text color to projects section */
+  text-align: center; /* Center text */
+  overflow: hidden;
+  flex-wrap: wrap;
+  flex-direction: column; /* Stack title and content vertically */
+}
+
+/* Title Styling */
+.projects__title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #38bdf8;
+  animation: slideFadeDown 1s ease forwards;
+}
+
+/* About Grid Layout */
+.about_grid {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Block */
+.about_left {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  width: 450px;
+  text-align: left;
+}
+.about_info li,
+.about_description {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Text hover effects */
+.about_info li:hover,
+.about_info li:active,
+.about_info li:focus,
+.about_description:hover,
+.about_description:active,
+.about_description:focus {
+  color: #f0fdfa;
+  transform: scale(1.02);
+  text-shadow: 0 0 10px #38bdf8, 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+/* Optional underline effect */
+.about_info li::after,
+.about_description::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.about_info li:hover::after,
+.about_info li:active::after,
+.about_description:hover::after,
+.about_description:active::after {
+  width: 100%;
+}
+
+/* Right Block */
+.about_right {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  max-width: 450px;
+  text-align: left;
+}
+
+/* Info list styling */
+.about_info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about_info li {
+  margin-bottom: 10px;
+  font-size: 1.23rem; /* Adjusted to match the projects section */
+  line-height: 1.6;
+}
+
+.about_info strong {
+  font-weight: bold;
+  font-size: 1.5rem; /* Slightly larger bold text for emphasis */
+  color: #38bdf8; /* Color for bold text */
+}
+
+/* Description Section */
+.about_description {
+  font-size: 1.23rem; /* Adjusted font size */
+  line-height: 2.0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+  overflow: hidden;
+  animation: typing 1s steps(50) 1s 1 normal both;
+}
+
+/* Cursor for Typing Effect */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #38bdf8; /* Color of cursor */
+  margin-left: 5px;
+  animation: blink 0.7s infinite step-start;
+}
+
+/* Cursor Blinking Animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Typing Animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes slideFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Adjust for small screens */
+@media (max-width: 500px) {
+  .about_left,
+  .about_right {
+    width: 100%;
+  }
+
+  .about_description {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+  }
+
+  .about_info li {
+    font-size: 0.9rem; /* Adjusted font size for smaller screens */
+  }
+}

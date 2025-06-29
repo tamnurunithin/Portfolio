@@ -1,0 +1,117 @@
+.projects {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f8fafc;
+  text-align: center;
+  overflow: hidden;
+}
+
+.projects__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #38bdf8;
+  animation: slideFadeDown 1s ease forwards;
+}
+
+.projects__grid {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.project__card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  width: 320px; /* increased from 180px */
+  padding: 1.8rem; /* more spacious */
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: swipeIn 1s ease forwards;
+  animation-delay: 0.2s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease,filter 0.4s ease, background-color 0.4s ease;
+  will-change: transform, box-shadow;
+    
+}
+
+.project__live-link{
+  color: #38bdf8;
+}
+
+
+.project__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+.project__card:hover,
+.project__card:active,
+.project__card:focus {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.4);
+  background-color: rgba(56, 189, 248, 0.05);
+  filter: brightness(1.05);
+  outline: none;
+}
+.project__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.3rem 0;
+  color: #e0f2fe;
+}
+
+.project__tech {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.project__github-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: #38bdf8;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.project__github-link:hover {
+  background-color: #1e40af;
+}
+
+/* Animation Keyframes */
+@keyframes swipeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Adjust for small screens */
+@media (max-width: 500px) {
+  .project__card {
+    width: 90%;
+  }
+}

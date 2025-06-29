@@ -1,0 +1,95 @@
+.home__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 500px;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+.resume-button-container {
+  margin-top: 3rem; /* Increase spacing below the icons */
+}
+
+
+.home__social-link {
+  font-size: 1.6rem;
+  color: #d1d5db;
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 0.6rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__social-link:hover {
+  color: #ffffff;
+  background-color: #60a5fa;
+  transform: scale(1.15);
+  box-shadow: 0 4px 10px rgba(96, 165, 250, 0.5);
+  cursor: pointer;
+}
+.home__socials-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Resume Button */
+.resume-button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem; /* increased padding for more width */
+  font-size: 1.05rem;   /* slightly larger text */
+  color: #fff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  font-weight: 600;
+  min-width: 180px;     /* ensures a bit more width */
+}
+.resume-button:hover {
+  background: linear-gradient(135deg, #3b82f6, #9333ea, #f59e0b);
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+  cursor: pointer;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

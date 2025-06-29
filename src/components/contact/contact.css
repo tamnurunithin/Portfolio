@@ -1,0 +1,120 @@
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contact Form Wrapper */
+.contact-wrapper {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  color: #f8fafc;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: swipeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Contact Title */
+.contact-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #38bdf8;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+/* Input Fields */
+.contact-input,
+.contact-textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  resize: none;
+}
+
+/* Input Field Focus */
+.contact-input:focus,
+.contact-textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  border: 2px solid #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* Input Hover Effect */
+.contact-input:hover,
+.contact-textarea:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Send Button */
+.contact-button {
+  background-color: #38bdf8;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button Hover Effect */
+.contact-button:hover {
+  background-color: #1e40af;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.6);
+}
+
+/* Animation for Contact Form */
+@keyframes swipeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .contact-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.1rem;
+  }
+}
