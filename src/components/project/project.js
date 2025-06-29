@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Netflix Interface",
     tech: "HTML, CSS, JS",
-    img: "https://static-00.iconduck.com/assets.00/netflix-icon-icon-1024x1024-w4ni4f6d.png",
+    img: "https://cdn-images-1.medium.com/max/1200/1*ty4NvNrGg4ReETxqU2N3Og.png",
     github: "https://github.com/tamnurunithin/Netflix-Interface",
     live: "https://tamnurunithin.github.io/Netflix-Interface",   // ← add live link
   },
