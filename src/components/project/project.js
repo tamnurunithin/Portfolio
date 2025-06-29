@@ -21,7 +21,7 @@ const projects = [
     tech: "ReactJS, API, NodeJS",
     img: "https://cdn-icons-png.flaticon.com/512/3845/3845731.png",
     github: "https://github.com/tamnurunithin/Weather_Website",
-    live: "https://weather-website-lac.vercel.app/",     // ← add live link
+    live: "https://weather-website-ten-kappa.vercel.app/",     // ← add live link
   },
 ];
 
