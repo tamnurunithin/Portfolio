@@ -14,7 +14,7 @@ const projects = [
     tech: "HTML, CSS, JS",
     img: "https://cdn-images-1.medium.com/max/1200/1*ty4NvNrGg4ReETxqU2N3Og.png",
     github: "https://github.com/tamnurunithin/Netflix-Interface",
-    live: "https://tamnurunithin.github.io/Netflix-Interface",   // ← add live link
+    live: "https://netflix-interface-sigma.vercel.app/",   // ← add live link
   },
   {
     title: "Weather App",
